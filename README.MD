@@ -17,6 +17,7 @@
 3.点击查询会覆盖已查询的内容
 
 
+![fofa](image/fofa.png)
 
 
 
@@ -51,6 +52,7 @@
 7.暂不支持查询iconhash，之后版本可能会新增
 
 
+![hunter](image/hunter.png)
 
 
 
@@ -75,6 +77,8 @@
 
 
 5.只能导出已查询出来的内容，可能之后版本会解决
+
+![shodan](image/shodan.png)
 
 
 
