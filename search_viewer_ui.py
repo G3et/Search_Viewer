@@ -15,10 +15,14 @@ from PySide2.QtWidgets import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        self.desktop = QApplication.desktop()
+        self.screenRect = self.desktop.screenGeometry()
+        self.screenheight = self.screenRect.height()
+        self.screenwidth = self.screenRect.width()
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1434, 836)
-        MainWindow.setMaximumSize(QSize(1434, 836))
+        MainWindow.resize(self.screenwidth, self.screenheight)
+        MainWindow.setMaximumSize(QSize(self.screenwidth, self.screenheight))
         icon = QIcon()
         icon.addFile(u"C:/Users/code/.designer/backup/logo.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -30,7 +34,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setObjectName(u"tabWidget")
         self.tabWidget.setEnabled(True)
         self.tabWidget.setGeometry(QRect(0, 0, 1531, 891))
-        self.tabWidget.setMaximumSize(QSize(10800, 1000))
+        self.tabWidget.setMaximumSize(QSize(self.screenwidth, self.screenheight))
         font = QFont()
         font.setPointSize(9)
         self.tabWidget.setFont(font)
@@ -116,7 +120,7 @@ class Ui_MainWindow(object):
         self.num.setCursor(QCursor(Qt.PointingHandCursor))
         self.num.setStyleSheet(u"/* \u672a\u4e0b\u62c9\u65f6\uff0cQComboBox\u7684\u6837\u5f0f */\n"
 "QComboBox {\n"
-"    border: 1px solid gray;   /* \u8fb9\u6846 */\n"
+"    border: 1px solid red;   /* \u8fb9\u6846 */\n"
 "    border-radius:9px;   /* \u5706\u89d2 */\n"
 "    padding: 0px 0px 0px 10px; /* \u4e0a\u5185\u8fb9\u8ddd\u3001\u53f3\u5185\u8fb9\u8ddd\u3001\u4e0b\u5185\u8fb9\u8ddd\u3001\u5de6\u5185\u8fb9\u8ddd */\n"
 "    color: rgba(51,51,51,1);\n"
@@ -187,7 +191,7 @@ class Ui_MainWindow(object):
 "    border-radius:16px; /* \u8fb9\u754c\u5706\u6ed1 */\n"
 "    font: bold 16px;     /* \u5b57\u4f53\u5927\u5c0f */\n"
 "    min-width:2em;\n"
-"    color:white; /* \u5b57\u4f53\u989c\u8272 */\n"
+"    color:blue; /* \u5b57\u4f53\u989c\u8272 */\n"
 "    border-radius: 15px;\n"
 "\n"
 "}\n"
@@ -277,7 +281,7 @@ class Ui_MainWindow(object):
         self.textBrowser.setStyleSheet(u"QTextBrowser {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
-"border: 2px solid gray;\n"
+"border: 2px solid red;\n"
 "border-radius: 8px;\n"
 "}\n"
 "\n"
@@ -346,7 +350,7 @@ class Ui_MainWindow(object):
 "    border-radius:16px; /* \u8fb9\u754c\u5706\u6ed1 */\n"
 "    font: bold 16px;     /* \u5b57\u4f53\u5927\u5c0f */\n"
 "    min-width:2em;\n"
-"    color:white; /* \u5b57\u4f53\u989c\u8272 */\n"
+"    color:blue; /* \u5b57\u4f53\u989c\u8272 */\n"
 "    border-radius: 15px;\n"
 "\n"
 "}\n"
@@ -357,6 +361,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.fofa = QTableWidget(self.tab)
+        self.fofa.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         if (self.fofa.columnCount() < 8):
             self.fofa.setColumnCount(8)
         __qtablewidgetitem = QTableWidgetItem()
@@ -485,6 +490,7 @@ class Ui_MainWindow(object):
 "}")
         self.num_2.setMaxVisibleItems(10)
         self.hunter_tab = QTableWidget(self.tab_2)
+        self.hunter_tab.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         if (self.hunter_tab.columnCount() < 11):
             self.hunter_tab.setColumnCount(11)
         __qtablewidgetitem8 = QTableWidgetItem()
@@ -717,6 +723,7 @@ class Ui_MainWindow(object):
         self.label_8.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.label_8.setTextInteractionFlags(Qt.LinksAccessibleByMouse)
         self.shodan_tab = QTableWidget(self.tab_3)
+        self.shodan_tab.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         if (self.shodan_tab.columnCount() < 8):
             self.shodan_tab.setColumnCount(8)
         __qtablewidgetitem19 = QTableWidgetItem()

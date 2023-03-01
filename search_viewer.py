@@ -1290,6 +1290,12 @@ class LoginGui(QMainWindow, Ui_MainWindow):
                 '提示',
                 '请点击导出关联域名/子域名')
 
+    def resizeEvent(self, event):
+        print("Window resized:", event.size().width(), event.size().height())
+        self.width = event.size().width()
+        self.height = event.size().height()
+
+
 if __name__ == '__main__':
     app = QApplication([])
     gui = LoginGui()
