@@ -1,0 +1,6 @@
+configobj==5.0.8
+jsonpath==0.82
+mmh3==3.0.0
+PySide2==5.15.2.1
+requests==2.22.0
+shodan==1.28.0
