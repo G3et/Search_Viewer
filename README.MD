@@ -1,5 +1,7 @@
 # 支持的平台
 
+支持一键导出
+
 
 
 ## FOFA
@@ -56,6 +58,8 @@
 
 
 
+![hunter](image/hunter_export.png)
+
 ## shodan
 
 
@@ -80,6 +84,12 @@
 
 ![shodan](image/shodan.png)
 
+
+
+![shodan](image/shodan_export.png)
+
+
+
 ## 360 Quake
 
 1.支持360 Quake语法
@@ -102,6 +112,12 @@
 
 ![quake](image/quake.png)
 
+
+
+![quake](image/quake_export.png)
+
+
+
 ## Zoomeye 钟馗之眼
 
 1.提供三个资产类型，分别是主机设备、关联域名、子域名，默认关联域名查询
@@ -115,6 +131,37 @@
 3.导出提供两个按钮分别有“导出主机设备”、“导出关联域名/子域名”，注意：选择的资产类型比如是“主机设备”，你导出的时候也必须选择导出“主机设备” 如果选了另一项系统第一次则会自动提示，第二次则不会提示直到退出后重新进入
 
 ![quake](image/zoomeye.png)
+
+
+
+![zoomeye](image/zoomeye_export.png)
+
+
+
+## Censys
+
+1.一页最多展示100条数据,可翻页 
+
+2.注意资产搜索类型
+
+![censys](image/censys.png)
+
+
+
+![censys](image/censys_export.png)
+
+
+
+# 语法
+
+![yufa](image/yufa.png)
+
+
+
+# 配置
+
+![config](image/config.png)
+
 
 
 # 版本
@@ -161,8 +208,22 @@
 
 
 
+## v3.0 2023/7/15
+
+·新增Censys
+
+·quake和zoomeye代码优化调整
+
+·界面改动,新增语法参考
+
+·修复查询过大闪退问题
+
+·修复导出时间戳被覆盖问题
+
+·修复已知BUG
+
+
+
 # 注意
-
-
 
 第一次使用选择保存，之后需要修改api点击修改即可，如果再点击保存将覆盖所有已经配置的API，则需要重新再配置
