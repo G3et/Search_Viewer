@@ -21,6 +21,7 @@
 
 ![fofa](image/fofa.png)
 
+![fofa](image/fofa_export.png)
 
 
 ## 鹰图
