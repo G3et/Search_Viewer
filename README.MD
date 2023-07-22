@@ -1,6 +1,6 @@
 # 支持的平台
 
-支持一键导出
+基于python pyside2库实现的，支持windows macos，windows至少需要win7以上系统才能运行，支持一键导出
 
 
 
