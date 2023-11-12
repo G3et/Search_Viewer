@@ -905,7 +905,7 @@ class LoginGui(QMainWindow, Ui_MainWindow):
         self.zoomeye_server = []
         self.zoomeye_timestamp = []
         self.zoomeye_city = []
-        self.zoomeye_isp = []
+        #self.zoomeye_isp = []
         self.zoomeye_app = []
         try:
             if code == 60000:
@@ -918,7 +918,7 @@ class LoginGui(QMainWindow, Ui_MainWindow):
                     server = match['portinfo']['extrainfo']
                     timestamp = match['timestamp']
                     city = match['geoinfo']['city']['names']['en']
-                    isp = match['geoinfo']['isp']
+                    #isp = match['geoinfo']['isp']
                     app = match['portinfo']['app']
 
                     row = self.zoomeye_tab.rowCount()  # 获取所有列
@@ -931,8 +931,8 @@ class LoginGui(QMainWindow, Ui_MainWindow):
                     item2.setText(str(server))
                     item3 = QTableWidgetItem()
                     item3.setText(str(city))
-                    item4 = QTableWidgetItem()
-                    item4.setText(str(isp))
+                    #item4 = QTableWidgetItem()
+                    #item4.setText(str(isp))
                     item5 = QTableWidgetItem()
                     item5.setText(str(app))
                     item6 = QTableWidgetItem()
@@ -944,7 +944,7 @@ class LoginGui(QMainWindow, Ui_MainWindow):
                     self.zoomeye_tab.setItem(row, 1, item1)
                     self.zoomeye_tab.setItem(row, 2, item2)
                     self.zoomeye_tab.setItem(row, 3, item3)
-                    self.zoomeye_tab.setItem(row, 4, item4)
+                    #self.zoomeye_tab.setItem(row, 4, item4)
                     self.zoomeye_tab.setItem(row, 5, item5)
                     self.zoomeye_tab.setItem(row, 6, item6)
                     self.zoomeye_tab.setItem(row, 7, item8)
@@ -953,7 +953,7 @@ class LoginGui(QMainWindow, Ui_MainWindow):
                     self.zoomeye_port.append(port)
                     self.zoomeye_server.append(server)
                     self.zoomeye_city.append(city)
-                    self.zoomeye_isp.append(isp)
+                    #self.zoomeye_isp.append(isp)
                     self.zoomeye_app.append(app)
                     self.zoomeye_org.append(org)
                     self.zoomeye_timestamp.append(timestamp)
