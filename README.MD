@@ -1,4 +1,7 @@
-# 支持的平台
+# 注：最新版v4.0版本为QT C++重构，由于C++编写iconhash无法和官方iconhash对应 采用python写的 预编译在工具中 会在temp创建临时文件iconhash.exe 因此可能会出现杀软误报问题！
+
+
+# v3.0以下版本支持的平台
 
 基于python pyside2库实现的，支持windows macos，windows至少需要win7以上系统才能运行，支持一键导出
 
